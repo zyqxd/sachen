@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: products
@@ -21,9 +23,9 @@ class Product < ApplicationRecord
   has_many :prices
   has_one :current_price, -> { order(effective_from: :desc).first }, through: :prices
 
-  validates_presence_of :category
-  validates_presence_of :code
-  validates_presence_of :name
+  validates :category, presence: true
+  validates :code, presence: true
+  validates :name, presence: true
   validates :reorder_threshold, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :tax_percent, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 0 }
 end

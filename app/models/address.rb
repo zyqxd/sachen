@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: addresses
@@ -14,8 +16,8 @@
 #
 
 class Address < ApplicationRecord
-  validates_presence_of :city
-  validates_presence_of :country
-  validates_presence_of :line_one
-  validates_presence_of :subdivision
+  validates :city, presence: true
+  validates :country, presence: true
+  validates :line_one, presence: true
+  validates :subdivision, presence: true
 end

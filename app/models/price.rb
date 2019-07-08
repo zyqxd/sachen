@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: prices
@@ -22,6 +24,6 @@
 class Price < ApplicationRecord
   belongs_to :product
 
-  validates_presence_of :effective_from
+  validates :effective_from, presence: true
   validates :price, presence: true, numericality: { greater_than: 0 }
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: partners
@@ -33,6 +35,6 @@ class Partner < ApplicationRecord
   has_one :shipping_address
   has_one :shipping_address_chinese
 
-  validates_presence_of :name
+  validates :name, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 end
