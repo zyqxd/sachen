@@ -73,7 +73,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     nio4r (2.4.0)
-    nokogiri (1.10.3)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     parallel (1.17.0)
     parser (2.6.3.0)
@@ -115,9 +115,6 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
-    rubocop-rails (2.2.0)
-      rack (>= 1.1)
-      rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
     spring (2.1.0)
     sprockets (3.7.2)
@@ -151,7 +148,6 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   rails (~> 5.2.3)
   rubocop (~> 0.72.0)
-  rubocop-rails
   spring
   tzinfo-data
   web-console (>= 3.3.0)
